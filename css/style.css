@@ -1,0 +1,63 @@
+/*----ESTRUTURA PRINCIPAL ----*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: #f0f8ff;
+   
+}
+label{
+   font-size:  0.9rem !important;
+}
+.container{
+    padding:0;
+    border-radius:5px 5px 5px 5px;
+    background-color:#f0f0f0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    width: 500px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+
+.titulo{
+    background-color: rgba(204, 99, 71, 0.5);
+    border: 1px rgba(204, 99, 71, 0.5);
+    border-radius:5px 5px 0px 0px;
+    font-size: 20px;
+    height: 70px;
+}
+
+.recuperar, .novocadastro{
+    height: 20px;
+}
+
+.back{
+    background-color: #000;
+   
+}
+
+a{
+text-decoration: none;
+font-size: 13px;
+
+}
+
+a:hover{
+font-size: 14px;  
+text-shadow: rgba(50, 50, 93, 0.25) 3px 3px 3px -4px, rgba(0, 0, 0, 0.3) 0px 2px 2px -3px;
+}
+
+
+/*---- FIM DA ESTRUTURA PRINCIPAL ----*/
+
+/*-------------------------------------------------------------*/
+
