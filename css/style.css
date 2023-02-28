@@ -18,6 +18,7 @@ label{
 }
 .container{
     padding:0;
+    
     border-radius:5px 5px 5px 5px;
     background-color:#f0f0f0;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -25,7 +26,7 @@ label{
     height: 500px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: auto;
+    margin-top: 200px;
 }
 
 .titulo{
@@ -40,9 +41,16 @@ label{
     height: 20px;
 }
 
+.back1{
+    margin-top: 250px;
+    margin-left: 2px;
+    margin-bottom: 2px !important;
+}
+
 .back{
-    background-color: #000;
-   
+    margin-top: 115px;
+    margin-left: 2px;
+    margin-bottom: 2px !important;
 }
 
 a{

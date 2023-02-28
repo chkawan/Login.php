@@ -9,11 +9,19 @@
 </head>
 
 <body>
+
+
+<?php
+$dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+
+if(!empty($dados['cadastrar'])){
+var_dump($dados);
+}
+?>
+
     <div class="container border col ">
 
-        <form action="" method="post">
-
-            <div class="grup ">
+        <form action="" method="POST">
 
                 <div  class="row-md-12 titulo d-flex justify-content-center">
                 <h2>Criar uma Conta</h2>
@@ -41,20 +49,18 @@
                             <input type="password" name="password" id="password" class="form-control">
                     </label>
                 </div>
-
                 
                 <div class="input-grup row-md-12  mb-3 d-grid gap-3 col-3 mx-auto ">
-                    <input type="submit" value="Conectar" id="conect" class="conect btn btn-success btn-sm form-control ">
+                    <input type="submit" value="Cadastrar" id="cadastrar" name="cadastrar" class="btn btn-success btn-sm form-control ">
                 </div>
 
-                <div class="row-md-12 back">
-            <input type="button" value="Voltar" onClick="JavaScript: window.history.back();" >
-        </div>
-
-            </div>
+                
 
         </form>
-
+        
+        <div class="back">
+            <input type="button" value="Voltar" onClick="JavaScript: window.history.back();"  class="btn btn-secondary btn-sm">
+        </div>
         
 
     </div>

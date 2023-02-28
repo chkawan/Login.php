@@ -27,16 +27,14 @@
                 </div>
 
                 <div class="input-grup row-md-12  mb-3 d-grid gap-3 col-3 mx-auto ">
-                    <input type="submit" value="Conectar" id="conect" class="conect btn btn-success btn-sm form-control ">
-                </div>
-
-                <div class="input-grup row-md-12 back  d-flex align-item-bottom ">
-                    <input type="button" value="Voltar" onClick="JavaScript: window.history.back();" >
+                    <input type="submit" value="Enviar" id="enviar" name="enviar" class="btn btn-success btn-sm form-control ">
                 </div>
 
         </form>
 
-        
+        <div class="back1">
+            <input type="button" value="Voltar" onClick="JavaScript: window.history.back();" class="btn btn-secondary btn-sm" >
+        </div>
 
     </div>
 
