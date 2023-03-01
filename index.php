@@ -1,4 +1,6 @@
 <?php
+session_start();
+ob_start();
 include_once "conn.php";
 ?>
 
@@ -13,7 +15,9 @@ include_once "conn.php";
 </head>
 
 <body>
+
 <?php
+echo password_hash(1234, PASSWORD_DEFAULT);
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 if(!empty($dados['conect'])){
     // var_dump($dados);
@@ -27,8 +31,22 @@ if(!empty($dados['conect'])){
                     $result_use->bindParam(':usuario', $dados['usuario'], PDO::PARAM_STR);
                     $result_use->execute();
 
-                    $row_use = $result_use->fetch(PDO::FETCH_ASSOC);
-                    var_dump($row_use);
+                    if(($result_use) AND ($result_use->rowCount() !=0)){
+                        $row_use = $result_use->fetch(PDO::FETCH_ASSOC);
+
+                        if(password_verify($dados['senha'], $row_use['senha'])){
+                            $_SESSION['id'] = $row_use['id'];
+                            $_SESSION['usuario'] = $row_use['usuario'];
+                            header("Location: dashbord.php");
+                        }else{
+                            $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Senha incorreta!</div>";
+                        }
+
+                    }else{
+                        $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Usuário incorreto!</div>";
+                    };
+
+                    
     };
 ?>
     <div class="container border col ">
@@ -39,19 +57,28 @@ if(!empty($dados['conect'])){
             <h2>Testando Niveis de Acesso</h2>
             </div>
 
-            <br><br>
-
+            
+            <div class="alert" role="alert">
+                <?php
+                if(isset($_SESSION['msg'])){
+                    echo $_SESSION['msg'];
+                    unset($_SESSION['msg']);
+                }
+                ?>
+            </div>
             <div class="input-grup row-md-12  mb-2 d-flex justify-content-center">
                 <label for="login">
                     Usuario:
-                        <input type="tex" name="usuario" id="usuario" class="form-control">
+                        <input type="tex" name="usuario" id="usuario" class="form-control" 
+                        value="<?php if(isset($dados['usuario'])) { echo $dados['usuario'];}?>">
                 </label>
             </div>
 
             <div class=" input-grup row-md-12  mb-2 d-flex justify-content-center password">
                 <label for="password">
                     Password:
-                        <input type="password" name="password" id="password" class="form-control">
+                        <input type="password" name="senha" id="senha" class="form-control" 
+                        value="<?php if(isset($dados['senha'])) { echo $dados['senha'];}?>">
                 </label>
             </div>
 

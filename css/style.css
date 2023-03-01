@@ -64,6 +64,13 @@ font-size: 14px;
 text-shadow: rgba(50, 50, 93, 0.25) 3px 3px 3px -4px, rgba(0, 0, 0, 0.3) 0px 2px 2px -3px;
 }
 
+.alert{
+    /* border: 1px solid #000; */
+    padding: 0;
+    height: 30px;
+    text-align: center;
+    margin: 5px;
+}
 
 /*---- FIM DA ESTRUTURA PRINCIPAL ----*/
 
