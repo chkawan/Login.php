@@ -3,6 +3,33 @@ session_start();
 ob_start();
 include_once "conn.php";
 
+
+// Verifica se o usuário está logado
+if (!isset($_SESSION["usuario"])) {
+  // Redireciona para o login
+  header("Location: index.php");
+  exit();
+}
+
+// Verifica o nível de acesso do usuário
+$nivel = $_SESSION["nivel"];
+
+// Exibe conteúdo diferente de acordo com o nível de acesso
+switch ($nivel) {
+  case 1:
+    echo "<h1>Bem-vindo, usuário com nível 1!</h1>";
+    break;
+  case 2:
+    echo "<h1>Bem-vindo, usuário com nível 2!</h1>";
+    break;
+  case 3:
+    echo "<h1>Bem-vindo, usuário com nível 3!</h1>";
+    break;
+  default:
+    echo "Erro: nível de acesso inválido.";
+    break;
+}
+
 if((!isset($_SESSION['id'])) AND (!isset($_SESSION['usuario']))){
 
 header("Location: index.php");

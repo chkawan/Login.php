@@ -16,42 +16,10 @@ include_once "conn.php";
 
 <body>
 
-<?php
-echo password_hash(1234, PASSWORD_DEFAULT);
-$dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-if(!empty($dados['conect'])){
-    // var_dump($dados);
 
-    $query_use = "SELECT id, usuario, senha 
-                    FROM usuarios 
-                    WHERE usuario = :usuario
-                    LIMIT 1";
-
-                    $result_use = $conn->prepare($query_use);
-                    $result_use->bindParam(':usuario', $dados['usuario'], PDO::PARAM_STR);
-                    $result_use->execute();
-
-                    if(($result_use) AND ($result_use->rowCount() !=0)){
-                        $row_use = $result_use->fetch(PDO::FETCH_ASSOC);
-
-                        if(password_verify($dados['senha'], $row_use['senha'])){
-                            $_SESSION['id'] = $row_use['id'];
-                            $_SESSION['usuario'] = $row_use['usuario'];
-                            header("Location: dashbord.php");
-                        }else{
-                            $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Senha incorreta!</div>";
-                        }
-
-                    }else{
-                        $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Usuário incorreto!</div>";
-                    };
-
-                    
-    };
-?>
     <div class="container border col ">
 
-        <form action="" method="post">
+        <form action="validacao.php" method="post">
 
             <div  class="row-md-12 titulo d-flex justify-content-center">
             <h2>Testando Niveis de Acesso</h2>
