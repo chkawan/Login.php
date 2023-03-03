@@ -15,3 +15,6 @@ try{
 }catch(PDOException $err){
    // echo "Erro: Conexão com banco de dados não realizada! Erro gerado " .$err->getMessage();
 }
+
+ini_set("SMTP","localhost");
+ini_set("smtp_port","25");

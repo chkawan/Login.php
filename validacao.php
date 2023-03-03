@@ -26,9 +26,11 @@ if(!empty($dados['conect'])){
                             $_SESSION['usuario'] = $row_use['usuario'];
                             $_SESSION["nivel"] = $row_use["nivel"];
                             header("Location: dashbord.php");
-                            var_dump($dados);
+                            
+                            
                         }else{
-                            $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>suario ou Senha incorreto!</div>";
+                            $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Usuario ou Senha incorreto!</div>";
+                            header("Location: index.php");
                         }
 
                     }else{
