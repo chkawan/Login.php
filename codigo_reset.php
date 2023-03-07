@@ -31,7 +31,7 @@
 
         </form>
 
-        <div class="back1">
+        <div class="back">
             <input type="button" value="Voltar" onClick="JavaScript: window.history.back();" class="btn btn-secondary btn-sm" >
         </div>
 

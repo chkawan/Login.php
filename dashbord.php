@@ -14,21 +14,7 @@ if (!isset($_SESSION["usuario"])) {
 // Verifica o nível de acesso do usuário
 $nivel = $_SESSION["nivel"];
 
-// Exibe conteúdo diferente de acordo com o nível de acesso
-switch ($nivel) {
-  case 1:
-    echo "<h1>Bem-vindo, usuário com nível 1!</h1>";
-    break;
-  case 2:
-    echo "<h1>Bem-vindo, usuário com nível 2!</h1>";
-    break;
-  case 3:
-    echo "<h1>Bem-vindo, usuário com nível 3!</h1>";
-    break;
-  default:
-    echo "Erro: nível de acesso inválido.";
-    break;
-}
+
 
 if((!isset($_SESSION['id'])) AND (!isset($_SESSION['usuario']))){
 
@@ -54,17 +40,37 @@ $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Sessão nao enc
 
         <form action="" method="post">
 
-                <div  class="row-md-12 titulo d-flex justify-content-center">
-                <h2>Bem-vindo <?php echo $_SESSION['usuario']; ?>!</h2>
+        <div  class="row-md-12 titulo d-flex justify-content-center">
+                <h2>Area dos Usuarios</h2>
                 </div>
 
-                <br><br>
+                <?php
+
+                  include_once "erro.php";
+
+                // Exibe conteúdo diferente de acordo com o nível de acesso
+                switch ($nivel) {
+                  case 1:
+                    echo '<h1>Bem-vindo, <span class="user text-uppercase">' . $_SESSION['usuario'] . '</span> com nível 1!</h1>';
+                    break;
+                  case 2:
+                    echo '<h1>Bem-vindo, <span class="user text-uppercase">' . $_SESSION['usuario'] . '</span> com nível 2!</h1>';
+                    break;
+                  case 3:
+                    echo '<h1>Bem-vindo, <span class="user text-uppercase">' . $_SESSION['usuario'] . '</span> com nível 3!</h1>';
+                    break;
+                  default:
+                    echo "Erro: nível de acesso inválido.";
+                    break;
+                }
+                
+                ?>
 
 
                 
         </form>
 
-        <div class="back1">
+        <div class="back">
             <a href="sair.php"><input type="button" value="Sair" class="btn btn-secondary btn-sm" ></a>
         </div>
 

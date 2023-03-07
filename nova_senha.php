@@ -23,7 +23,9 @@ require_once 'conn.php';
                 <h2>Digite o Codgio enviado</h2>
                 </div>
 
-                <br><br>
+                <?php
+                 include_once "erro.php";
+                ?>
 
                 <div class="input-grup row-md-12  mb-2 d-flex justify-content-center">
                     <label for="senha">
@@ -45,7 +47,7 @@ require_once 'conn.php';
 
         </form>
 
-        <div class="back1">
+        <div class="back">
             <input type="button" value="Voltar" onClick="JavaScript: window.history.back();" class="btn btn-secondary btn-sm" >
         </div>
 

@@ -10,6 +10,8 @@
 html,
 body {
     height: 100%;
+    margin: 0;
+    padding: 0;
     background-color: #f0f8ff;
    
 }
@@ -17,16 +19,17 @@ label{
    font-size:  0.9rem !important;
 }
 .container{
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: auto;
+    margin-left: auto;
     padding:0;
-    
     border-radius:5px 5px 5px 5px;
     background-color:#f0f0f0;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     width: 500px;
-    height: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 200px;
+    height: 500px;    
 }
 
 .titulo{
@@ -41,16 +44,17 @@ label{
     height: 20px;
 }
 
-.back1{
-    margin-top: 250px;
-    margin-left: 2px;
-    margin-bottom: 2px !important;
-}
+
 
 .back{
-    margin-top: 115px;
-    margin-left: 2px;
-    margin-bottom: 2px !important;
+    position: absolute;
+    bottom: 0;
+    
+  
+}
+.back .btn{
+    width: 100px;
+    border-radius: 0px 5px 0px 5px;
 }
 
 a{
@@ -72,6 +76,9 @@ text-shadow: rgba(50, 50, 93, 0.25) 3px 3px 3px -4px, rgba(0, 0, 0, 0.3) 0px 2px
     margin: 5px;
 }
 
+.user{
+    color:blue;
+}
 /*---- FIM DA ESTRUTURA PRINCIPAL ----*/
 
 /*-------------------------------------------------------------*/

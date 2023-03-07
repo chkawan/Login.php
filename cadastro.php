@@ -33,7 +33,9 @@ var_dump($dados);
                 <h2>Criar uma Conta</h2>
                 </div>
 
-                <br><br>
+                <?php
+                 include_once "erro.php";
+                 ?>
 
                 <div class="input-grup row-md-12  mb-2 d-flex justify-content-center">
                     <label for="email">
