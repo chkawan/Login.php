@@ -32,6 +32,19 @@ label{
     width: 500px;
     height: 500px;    
 }
+.container2{
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    padding:0;
+    border-radius:5px 5px 5px 5px;
+    background-color:#f0f0f0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    width: auto;
+    height: auto;    
+}
 
 .titulo{
     background-color: rgba(204, 99, 71, 0.5);
@@ -68,6 +81,10 @@ a:hover{
 font-size: 14px;  
 text-shadow: rgba(50, 50, 93, 0.25) 3px 3px 3px -4px, rgba(0, 0, 0, 0.3) 0px 2px 2px -3px;
 }
+
+.btn-acao.hide {
+    display: none;
+  }
 
 .alert{
     /* border: 1px solid #000; */
