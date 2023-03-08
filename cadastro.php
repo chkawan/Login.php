@@ -62,7 +62,7 @@ var_dump($dados);
                         <select id="nivel" name="nivel">
                             <option value="1">Administrador</option>
                             <option value="2">Usuário comum</option>
-                            <option value="3">Vip</option>
+                            
                         </select>
                 </div>
                 

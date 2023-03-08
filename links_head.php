@@ -11,6 +11,8 @@
         <link rel="stylesheet" type="text/css" href="css/style.css"/> <!----- CSS INTERNO ------>
 
         <script src="js/jquery-3.6.1.min.js"></script><!----- JQUERY ------>
+
+        <script src="js/function.js"></script>
     
         <!-- <link href="css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />--- JQUAREY DATATABLE ---- -->
 

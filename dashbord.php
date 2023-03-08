@@ -50,32 +50,24 @@ $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Sessão nao enc
 
                 // Exibe conteúdo diferente de acordo com o nível de acesso
                 switch ($nivel) {
+                  
                   case 1:
-                    echo '<h1>Bem-vindo, <span class="user text-uppercase">' . $_SESSION['usuario'] . '</span> com nível 1!</h1>';
+                    echo '<p>Bem-vindo, <span class="user text-uppercase">' . $_SESSION['usuario'] . '</span> com nível 1!</p><br>';
+                    
                     break;
+
                   case 2:
-                    echo '<h1>Bem-vindo, <span class="user text-uppercase">' . $_SESSION['usuario'] . '</span> com nível 2!</h1>';
+                    echo '<p>Bem-vindo, <span class="user text-uppercase">' . $_SESSION['usuario'] . '</span> com nível 2!</p>';
                     break;
-                  case 3:
-                    echo '<h1>Bem-vindo, <span class="user text-uppercase">' . $_SESSION['usuario'] . '</span> com nível 3!</h1>';
-                    break;
+
                   default:
                     echo "Erro: nível de acesso inválido.";
                     break;
-                }
-                
-                ?>
-
+                    
+                };
 
                 
-        </form>
-
-        <div class="back">
-            <a href="sair.php"><input type="button" value="Sair" class="btn btn-secondary btn-sm" ></a>
-        </div>
-
-    </div>
-
+                ?> 
 
     <?php
         include_once "links_footer.php";
